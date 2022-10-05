@@ -4,7 +4,9 @@ import "./style.css";
 
 function List({ todos, setTodos }) {
   const onDeleteHandler = (todoId) => {
+    // console.log(todoId); //-> 누른 카드의 id값
     const newTodos = todos.filter((todo) => {
+      // console.log(todo); //-> 현재 리스트있는 전체 배열
       return todo.id !== todoId;
     });
     setTodos(newTodos);
